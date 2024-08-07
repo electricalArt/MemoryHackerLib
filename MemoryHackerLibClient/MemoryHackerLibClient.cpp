@@ -1,9 +1,10 @@
 // MemoryHackerLibClient.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "Memo
 #include <iostream>
-#include <MemoryHacker.h>
 #include <assert.h>
+
 
 PDWORD32 GetGameMoneyPointer(HANDLE hGameProcess, HMODULE hTargetModule)
 {
@@ -50,7 +51,7 @@ void SetGameMoney(HANDLE hGameProcess, PDWORD32 lpMoney, DWORD32 dwNewMoneyValue
 
 int main()
 {
-	ConfigureLoggers("C:\\Users\\musli\\AppData\\Local\\Temp\\MemoryHackerLibClient.log");
+	ConfigureLoggers(L"MemoryHackerLibClient.log");
 
 	HANDLE hWesnothProcess = GetProcessByWindowName(L"The Battle for Wesnoth - 1.14.9");
     assert(hWesnothProcess);

@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\musli\ArtHome\Projects\GameCheats\MemoryHackerLib\MemoryHackerLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\musli\ArtHome\Projects\GameCheats\MemoryHackerLib\MemoryHackerLib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -91,6 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\musli\ArtHome\Projects\GameCheats\MemoryHackerLib\MemoryHackerLib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,7 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\musli\ArtHome\Projects\GameCheats\MemoryHackerLib\MemoryHackerLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\musli\ArtHome\Projects\GameCheats\MemoryHackerLib\MemoryHackerLib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\musli\ArtHome\Projects\MemoryHackerLib\MemoryHackerLib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,6 +134,9 @@
     <ClCompile Include="MemoryHackerLibClient.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CheatsStandard\CheatsStandard\CheatsStandard.vcxproj">
+      <Project>{0dfd24fc-51a4-461a-b4b9-6175995a286b}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MemoryHackerLib\MemoryHackerLib.vcxproj">
       <Project>{516bfd95-a3cb-435e-8436-cc172a77aa80}</Project>
     </ProjectReference>

@@ -4,17 +4,7 @@
 #include "pch.h"
 #include "framework.h"
 #include "MemoryHacker.h"
-
-INITIALIZE_EASYLOGGINGPP
-
-void ConfigureLoggers(const char* szcLogFileFullName)
-{
-    el::Configurations loggerConfigs;
-    loggerConfigs.setToDefault();
-    loggerConfigs.setGlobally(el::ConfigurationType::Filename, szcLogFileFullName);
-    el::Loggers::reconfigureAllLoggers(loggerConfigs);
-    LOG(INFO) << "Logger is configured";
-}
+#include <easylogging++.h>
 
 HANDLE GetProcessByWindowName(const WCHAR* wszcWindowName)
 {
@@ -58,7 +48,7 @@ HMODULE GetProcessTargetModule(HANDLE hProcess, const WCHAR* wszcTargetModuleNam
             wszModuleName,
             1024
         );
-        LOG(INFO) << "Found module: " << wszModuleName;
+        LOG(TRACE) << "Found module: " << wszModuleName;
         if (wcscmp(wszModuleName, wszcTargetModuleName) == 0)
         {
             hTargetModule = hModules[i];

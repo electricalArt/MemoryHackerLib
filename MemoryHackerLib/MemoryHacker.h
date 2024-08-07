@@ -8,16 +8,6 @@
 #include <easylogging++.h>
 
 
-/*F+F+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  Function: ConfigureLoggers()
-
-  Summary:  Configures each loggers with default settings.
-
-  Args:     void
-
-  Returns:  void
------------------------------------------------------------------F-F*/
-void ConfigureLoggers(const char* szcLogFileFullName);
 
 /*F+F+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   Function: GetProcessByWindowName()
