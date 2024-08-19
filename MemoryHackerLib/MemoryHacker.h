@@ -26,11 +26,11 @@ HANDLE GetProcessByWindowName(const WCHAR* wszcWindowName);
   Summary:  Searches for module with given name within given proces.
 
   Args:     hProcess - `HANDLE` to process.
-			wszcTargetModuleName - name of desired module.
+			wszTargetModuleName - name of desired module.
 
   Returns:  `HMODULE` to found module. If function fails, it returns NULL.
 -----------------------------------------------------------------F-F*/
-HMODULE GetProcessTargetModule(HANDLE hProcess, const WCHAR* wszcTargetModuleName);
+HMODULE GetProcessTargetModule(HANDLE hProcess, const WCHAR* wszTargetModuleName);
 
 /*F+F+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   Function: GetProcessTargetModuleBase()

@@ -24,7 +24,7 @@ HANDLE GetProcessByWindowName(const WCHAR* wszcWindowName)
 }
 
 
-HMODULE GetProcessTargetModule(HANDLE hProcess, const WCHAR* wszcTargetModuleName)
+HMODULE GetProcessTargetModule(HANDLE hProcess, const WCHAR* wszTargetModuleName)
 {
 	HMODULE hModules[1024];
 	DWORD cbNeeded = 0;
@@ -39,7 +39,7 @@ HMODULE GetProcessTargetModule(HANDLE hProcess, const WCHAR* wszcTargetModuleNam
 
     unsigned int cuFoundModules = cbNeeded / sizeof(HMODULE);
     HMODULE hTargetModule = NULL;
-    for (int i = 0; i < cuFoundModules; i++)
+    for (unsigned int i = 0; i < cuFoundModules; i++)
     {
         WCHAR wszModuleName[1024];
         GetModuleBaseNameW(
@@ -48,8 +48,9 @@ HMODULE GetProcessTargetModule(HANDLE hProcess, const WCHAR* wszcTargetModuleNam
             wszModuleName,
             1024
         );
-        LOG(TRACE) << "Found module: " << wszModuleName;
-        if (wcscmp(wszModuleName, wszcTargetModuleName) == 0)
+        LOG_N_TIMES(5, TRACE) << "Found module: " << wszModuleName;
+        //  Case-insensitive compare
+        if (_wcsicmp(wszModuleName, wszTargetModuleName) == 0)
         {
             hTargetModule = hModules[i];
             break;
